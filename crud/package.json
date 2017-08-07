@@ -1,0 +1,20 @@
+{
+  "name": "express-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Tom Wang",
+    "email": "tom.wanghaiyi@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "pug": "^2.0.0-rc.3"
+  }
+}
