@@ -15,31 +15,7 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/cats', function(req, res) {
-  res.json([
-    { name: "the Dinotocat", image: "https://octodex.github.com/images/dinotocat.png" },
-    { name: "the Benjamin Bannekat", image: "https://octodex.github.com/images/bannekat.png" }
-  ]);
-});
-
-app.post('/cats', function(req, res) {
-  console.log(req.body);
-  res.json({
-    message: `新增 ${req.body.name} 成功`
-  });
-});
-
-app.put('/cats/:name', function(req, res) {
-  res.json({
-    message: `修改 ${req.params.name} 成功`
-  });
-});
-
-app.delete('/cats/:name', function(req, res) {
-  res.json({
-    message: `删除 ${req.params.name} 成功`
-  });
-});
+app.use('/cats', require('./cats'));
 
 app.listen(3000, function() {
   console.log('Server listening on port 3000');
